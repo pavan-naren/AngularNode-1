@@ -1,0 +1,50 @@
+
+<mat-card  class="example-card">
+    <div class="example-container" >
+            <form (submit)="onAddPost(user)" #user="ngForm"  >
+            <mat-form-field>
+              <input matInput #firstname="ngModel"  name = "firstName" ngModel placeholder="FirstName" required/>
+            </mat-form-field>
+            <span style="display:inline-block; width: 50px;"></span>
+            <mat-form-field>
+                    <input matInput placeholder="LastName" #lastName="ngModel"  name = "lastName" ngModel required/>
+            </mat-form-field>
+                  <br>
+                  <mat-form-field>
+                        <input matInput placeholder="Address Line 1" #addl1="ngModel"  name = "addl1" ngModel required>
+                      </mat-form-field>
+                      <span style="display:inline-block; width: 50px;"></span>
+                      <mat-form-field>
+                            <input matInput placeholder="Address Line 2" #addl2="ngModel"  name = "addl2" ngModel required/>
+                          </mat-form-field>
+                          <br>
+                          <mat-form-field>
+                                <input matInput placeholder="City" #city="ngModel"  name = "city" ngModel required/>
+                              </mat-form-field>
+                              <span style="display:inline-block; width: 50px;"></span>
+                              <mat-form-field>
+                                    <input matInput placeholder="State" #state="ngModel"  name = "state" ngModel required/>
+                                  </mat-form-field>
+                                  <br>
+                                  <mat-form-field>
+                                        <input matInput placeholder="Country" #country="ngModel"  name = "country" ngModel required/>
+                                      </mat-form-field>
+                                      <span style="display:inline-block; width: 50px;"></span>
+                                      <mat-form-field>
+                                            <input matInput placeholder="Zip Code" #zipcode="ngModel"  name = "zipcode" ngModel required/>
+                                          </mat-form-field>
+                                          <br>
+                                          <mat-form-field>
+                                          <input matInput placeholder="Email" #email="ngModel"  name = "email" ngModel required/>
+                                        </mat-form-field>
+                                        <span style="display:inline-block; width: 50px;"></span>
+                                        <button mat-raised-button type="reset">Reset</button>
+                                        <span style="display:inline-block; width: 30px;"></span>
+    
+      <button mat-raised-button color="primary" type="submit">Save</button>
+            
+            </form>
+          </div>
+          
+        </mat-card>
+          

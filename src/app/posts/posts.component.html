@@ -1,0 +1,61 @@
+<!-- <table border='1'>  
+  
+        <tr>  
+          <td>Id</td>  
+          <td>Name</td>  
+          <td>Address</td>  
+          <td>Edit</td>  
+          <td>Delete</td>  
+        </tr>  
+        <tr *ngFor="let kk of Repdata;let ind = index">  
+             
+          <td>{{ind + 1}}</td>  
+          <td>{{kk.firstName}}</td>  
+          <td>{{kk.city}}</td>  
+          <td><a (click)="edit(kk)" style="color:blueviolet">Edit</a></td>  
+          <td><a (click)="delete(kk._id)" style="color:blueviolet">Delete</a>  </td>  
+        </tr>  
+      </table>   -->
+        
+
+<mat-accordion multi="true" >
+        <mat-expansion-panel *ngFor ="let post of Repdata ;let ind = index">
+            <mat-expansion-panel-header>
+                User 
+               {{ ind + 1 }}
+            </mat-expansion-panel-header>
+            <strong> First Name: </strong>  
+            <span>{{ post.firstName }}</span>
+            <br>
+            
+            <strong> Last Name: </strong>  
+            <span>{{ post.lastName }}</span>
+            <br>
+            <strong> Address Line 1: </strong>  
+            <span>{{ post.addl1 }}</span>
+            <br>
+            <strong> Address Line 2: </strong>  
+            <span>{{ post.addl2 }}</span>
+            <br>
+            <strong> City: </strong>  
+            <span>{{ post.city }}</span>
+            <br>
+            <strong> State: </strong>  
+            <span>{{ post.state }}</span>
+            <br>
+            <strong> Country: </strong>  
+            <span>{{ post.country }}</span>
+            <br>
+            <strong> Zip Code: </strong>  
+            <span>{{ post.zipcode }}</span>
+            <br>
+           
+            <mat-action-row>
+                    <!-- <button (click)="edit(post)" color="primary" mat-button>EDIT</button> -->
+                    <button (click)="delete(post._id)" color="warn"mat-button>DELETE</button>
+                  </mat-action-row>
+                  
+        </mat-expansion-panel>
+    
+    </mat-accordion>
+    <p class=" info-text mat-body-1" *ngIf="Repdata.length == 0" >No Users  added yet</p>
