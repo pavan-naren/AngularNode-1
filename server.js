@@ -83,7 +83,7 @@ app.post("/api/SaveUser",function(req,res){
      if(err){    
          res.send(err);    
      }    
-     else{      
+     else{    
             res.send({data:"Record has been Deleted..!!"});               
         }    
  });    
@@ -96,8 +96,7 @@ app.post("/api/SaveUser",function(req,res){
               if(err){  
                   res.send(err);  
               }  
-              else{  
-                              
+              else{           
                   res.send(data);  
                   }  
 
@@ -106,7 +105,7 @@ app.post("/api/SaveUser",function(req,res){
    
   
   
-app.listen(3000, function () {  
+app.listen(3010, function () {  
     
- console.log('Example app listening on port 3000!')  
+ console.log('Example app listening on port 3010!')  
 })  

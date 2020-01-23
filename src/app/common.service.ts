@@ -15,19 +15,19 @@ export class CommonService {
   constructor(private http: Http) { }  
   
   saveUser(user){      
-    return this.http.post('http://localhost:3000/api/SaveUser/', user)  
+    return this.http.post('http://localhost:3010/api/SaveUser/', user)  
             .map((response: Response) =>response.json())              
   }  
   
   GetUser(){   
     // console.log("this is before getuser in comm");
 
-    return this.http.get('http://localhost:3000/api/getUser/')  
+    return this.http.get('http://localhost:3010/api/getUser/')  
     .map(response => response.json());
                           
   }  
  deleteUser(id){  
-    return this.http.post('http://localhost:3000/api/deleteUser/',{'id': id})  
+    return this.http.post('http://localhost:3010/api/deleteUser/',{'id': id})  
             .map((response: Response) =>response.json())               
   } 
   // getpost(){
